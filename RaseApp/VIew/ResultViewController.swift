@@ -28,7 +28,7 @@ class ResultViewController: UIViewController, UITableViewDataSource, UITableView
         
         let data = UserDefaults.standard.value([Result].self, forKey: "results")
         dataResults = data?.sorted(by: { $0.exp > $1.exp })
-        dataResults?.removeSubrange(8...)
+        dataResults?.prefix(8)
         
         //create Fon
         imagesFonView.contentMode = .scaleAspectFill

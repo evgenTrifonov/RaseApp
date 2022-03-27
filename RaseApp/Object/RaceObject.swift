@@ -11,6 +11,7 @@ enum RaceObjectType {
     case barear
 }
 
+let imagesRoadView = UIImageView(image: UIImage(named: "street"))
 
 class RaceObject: UIImageView {
     
@@ -33,11 +34,13 @@ class RaceObject: UIImageView {
             CGPoint(x: 350, y: -11)
         ],
         [ // 6 out line
-            CGPoint(x: 60,  y: 810),
-            CGPoint(x: 200, y: 810),
-            CGPoint(x: 350, y: 810)
+            CGPoint(x: 60,  y: 760),
+            CGPoint(x: 200, y: 760),
+            CGPoint(x: 350, y: 760)
         ],
     ]
+    
+    
     
     func size() -> CGSize {
         return CGSize(width: 100, height: 100)
@@ -63,6 +66,7 @@ class RaceObject: UIImageView {
     
     func animate() {
         UIView.animate(withDuration: TimeInterval(Manager.shared.speed), delay: 0, options: .curveLinear,  animations: {
+            
             let intY = Int(self.point.y)
             let intX = Int(self.point.x)
             let minFrame = self.raceMap[0][intX]
@@ -73,11 +77,13 @@ class RaceObject: UIImageView {
 
             self.view?.frame.size = self.size()
             self.view?.center = CGPoint(x: x, y: y)
-
+            
         }) { (Bool) in
             self.move()
         }
     }
+    
+    
     
     func add() {
         let cell = Int.random(in: 0...2)
@@ -100,6 +106,7 @@ class RaceObject: UIImageView {
         self.move()
     }
     
+    
     func move() {
         self.point.y += 1
         
@@ -109,7 +116,8 @@ class RaceObject: UIImageView {
         if self.isCarContact() == true {
             contactWithCar()
         }
-        self.animate()
+        animate()
+        
     }
     
     func contactWithCar(){

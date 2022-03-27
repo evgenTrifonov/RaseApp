@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-let elements = ["wheel", "wheel2"]
+let elements = ["wheel", "kirp", "stone"]
 
 class BarrierObject: RaceObject {
     
     override func size() -> CGSize {
-        return CGSize(width: 80, height: 80)
+        return CGSize(width: 75, height: 75)
     }
     
     override func contactWithCar(){

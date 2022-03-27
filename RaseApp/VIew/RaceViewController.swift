@@ -9,6 +9,10 @@ import UIKit
 
 class RaceViewController: UIViewController {
     
+    enum Constants {
+            static let step: CGFloat = 130
+        }
+    
     @IBOutlet weak var carImage: UIImageView?
     @IBOutlet weak var resultLabel: UILabel?
     @IBOutlet weak var displayView: UIView?
@@ -26,10 +30,26 @@ class RaceViewController: UIViewController {
         car?.moveRight()
     }
 
+    let imagesRoadView = UIImageView(image: UIImage(named: "street"))
+    let imagesRoad2View = UIImageView(image: UIImage(named: "street2"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        imagesRoadView.contentMode = .scaleAspectFill
+        imagesRoadView.frame = CGRect(x: CGFloat.zero, y: CGFloat.zero, width: view.frame.width, height: view.frame.height)
+        view.addSubview(imagesRoadView)
+        view.sendSubviewToBack(imagesRoadView)
+                
+        imagesRoad2View.contentMode = .scaleAspectFill
+        imagesRoad2View.frame = CGRect(x: CGFloat.zero, y: CGFloat.zero - view.frame.height, width: view.frame.width, height: view.frame.height)
+        view.addSubview(imagesRoad2View)
+        view.sendSubviewToBack(imagesRoad2View)
+        
+        DispatchQueue.main.async {
+                self.moveRoad()
+        }
+        
         startGame()
     }
     override func viewWillLayoutSubviews() {
@@ -105,8 +125,24 @@ class RaceViewController: UIViewController {
             print("empty")
         }
     }
+ 
+  
     
+    func viewWillApper() {
+            moveRoad()
+           
+        }
 
 }
 
 
+extension RaceViewController {
+func moveRoad() {
+    UIView.animate(withDuration: 6,
+                   delay: 0.0,
+                   options: [.repeat, .curveLinear], animations: {
+        self.imagesRoadView.frame = self.imagesRoadView.frame.offsetBy(dx: 0.0, dy: +1 * self.imagesRoadView.frame.size.height)
+        self.imagesRoad2View.frame = self.imagesRoad2View.frame.offsetBy(dx: 0.0, dy: +1 * self.imagesRoad2View.frame.size.height)
+    }, completion: nil)
+  }
+}

@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "stone.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "street.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },

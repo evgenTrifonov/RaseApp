@@ -8,11 +8,13 @@
 import Foundation
 
 extension NSObject {
-    var className: String {
-        return NSStringFromClass(type(of: self)).components(separatedBy: ".").last ?? ""
-    }
-    
-    @nonobjc class var className: String {
-        return NSStringFromClass(self).components(separatedBy: ".").last ?? ""
-    }
+    static var className: String {
+            return String(describing: self)
+        }
+
+        var className: String {
+            return type(of: self).className
+        }
 }
+
+
