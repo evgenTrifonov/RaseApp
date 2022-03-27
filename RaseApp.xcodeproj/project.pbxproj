@@ -13,6 +13,20 @@
 		5C85FF0A27EE3717007A7907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C85FF0827EE3717007A7907 /* Main.storyboard */; };
 		5C85FF0C27EE3718007A7907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C85FF0B27EE3718007A7907 /* Assets.xcassets */; };
 		5C85FF0F27EE3718007A7907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C85FF0D27EE3718007A7907 /* LaunchScreen.storyboard */; };
+		5C85FF1E27EE38CB007A7907 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF1D27EE38CB007A7907 /* RaceViewController.swift */; };
+		5C85FF2027EE38D2007A7907 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF1F27EE38D1007A7907 /* SettingViewController.swift */; };
+		5C85FF2327EE44A2007A7907 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF2227EE44A2007A7907 /* Settings.swift */; };
+		5C85FF2527EE44CA007A7907 /* CarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF2427EE44CA007A7907 /* CarColor.swift */; };
+		5C85FF2727EE44F3007A7907 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF2627EE44F3007A7907 /* Result.swift */; };
+		5C85FF2A27EE4556007A7907 /* NSObject+name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF2927EE4556007A7907 /* NSObject+name.swift */; };
+		5C85FF2C27EE4583007A7907 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF2B27EE4583007A7907 /* UserDefaults.swift */; };
+		5C85FF3127EE46FA007A7907 /* BarrierObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF3027EE46FA007A7907 /* BarrierObject.swift */; };
+		5C85FF3327EE471E007A7907 /* RaceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF3227EE471E007A7907 /* RaceObject.swift */; };
+		5C85FF3527EE4749007A7907 /* CarObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF3427EE4749007A7907 /* CarObject.swift */; };
+		5C85FF3B27EE47F7007A7907 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF3A27EE47F7007A7907 /* ResultCell.swift */; };
+		5C85FF3D27EE4851007A7907 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF3C27EE4851007A7907 /* ResultViewController.swift */; };
+		5C85FF3F27EE48CF007A7907 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF3E27EE48CF007A7907 /* Manager.swift */; };
+		5C85FF4127EE492D007A7907 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85FF4027EE492D007A7907 /* SettingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +38,20 @@
 		5C85FF0B27EE3718007A7907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C85FF0E27EE3718007A7907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C85FF1027EE3718007A7907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C85FF1D27EE38CB007A7907 /* RaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
+		5C85FF1F27EE38D1007A7907 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5C85FF2227EE44A2007A7907 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		5C85FF2427EE44CA007A7907 /* CarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarColor.swift; sourceTree = "<group>"; };
+		5C85FF2627EE44F3007A7907 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		5C85FF2927EE4556007A7907 /* NSObject+name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+name.swift"; sourceTree = "<group>"; };
+		5C85FF2B27EE4583007A7907 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		5C85FF3027EE46FA007A7907 /* BarrierObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrierObject.swift; sourceTree = "<group>"; };
+		5C85FF3227EE471E007A7907 /* RaceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceObject.swift; sourceTree = "<group>"; };
+		5C85FF3427EE4749007A7907 /* CarObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarObject.swift; sourceTree = "<group>"; };
+		5C85FF3A27EE47F7007A7907 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		5C85FF3C27EE4851007A7907 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		5C85FF3E27EE48CF007A7907 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		5C85FF4027EE492D007A7907 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +86,67 @@
 			children = (
 				5C85FF0227EE3717007A7907 /* AppDelegate.swift */,
 				5C85FF0427EE3717007A7907 /* SceneDelegate.swift */,
-				5C85FF0627EE3717007A7907 /* ViewController.swift */,
+				5C85FF2827EE4537007A7907 /* Extension */,
+				5C85FF2127EE447A007A7907 /* Data */,
+				5C85FF2F27EE4658007A7907 /* Object */,
+				5C85FF1627EE382C007A7907 /* VIew */,
+				5C85FF3E27EE48CF007A7907 /* Manager.swift */,
+				5C85FF4027EE492D007A7907 /* SettingManager.swift */,
 				5C85FF0827EE3717007A7907 /* Main.storyboard */,
-				5C85FF0B27EE3718007A7907 /* Assets.xcassets */,
 				5C85FF0D27EE3718007A7907 /* LaunchScreen.storyboard */,
+				5C85FF0B27EE3718007A7907 /* Assets.xcassets */,
 				5C85FF1027EE3718007A7907 /* Info.plist */,
 			);
 			path = RaseApp;
+			sourceTree = "<group>";
+		};
+		5C85FF1627EE382C007A7907 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				5C85FF4427EF2910007A7907 /* Cell */,
+				5C85FF1F27EE38D1007A7907 /* SettingViewController.swift */,
+				5C85FF1D27EE38CB007A7907 /* RaceViewController.swift */,
+				5C85FF0627EE3717007A7907 /* ViewController.swift */,
+				5C85FF3C27EE4851007A7907 /* ResultViewController.swift */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		5C85FF2127EE447A007A7907 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5C85FF2227EE44A2007A7907 /* Settings.swift */,
+				5C85FF2427EE44CA007A7907 /* CarColor.swift */,
+				5C85FF2627EE44F3007A7907 /* Result.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5C85FF2827EE4537007A7907 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5C85FF2927EE4556007A7907 /* NSObject+name.swift */,
+				5C85FF2B27EE4583007A7907 /* UserDefaults.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5C85FF2F27EE4658007A7907 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				5C85FF3027EE46FA007A7907 /* BarrierObject.swift */,
+				5C85FF3227EE471E007A7907 /* RaceObject.swift */,
+				5C85FF3427EE4749007A7907 /* CarObject.swift */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		5C85FF4427EF2910007A7907 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C85FF3A27EE47F7007A7907 /* ResultCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +220,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C85FF3D27EE4851007A7907 /* ResultViewController.swift in Sources */,
+				5C85FF2727EE44F3007A7907 /* Result.swift in Sources */,
 				5C85FF0727EE3717007A7907 /* ViewController.swift in Sources */,
+				5C85FF2C27EE4583007A7907 /* UserDefaults.swift in Sources */,
 				5C85FF0327EE3717007A7907 /* AppDelegate.swift in Sources */,
+				5C85FF4127EE492D007A7907 /* SettingManager.swift in Sources */,
+				5C85FF3127EE46FA007A7907 /* BarrierObject.swift in Sources */,
 				5C85FF0527EE3717007A7907 /* SceneDelegate.swift in Sources */,
+				5C85FF2327EE44A2007A7907 /* Settings.swift in Sources */,
+				5C85FF2A27EE4556007A7907 /* NSObject+name.swift in Sources */,
+				5C85FF2027EE38D2007A7907 /* SettingViewController.swift in Sources */,
+				5C85FF3527EE4749007A7907 /* CarObject.swift in Sources */,
+				5C85FF2527EE44CA007A7907 /* CarColor.swift in Sources */,
+				5C85FF3B27EE47F7007A7907 /* ResultCell.swift in Sources */,
+				5C85FF1E27EE38CB007A7907 /* RaceViewController.swift in Sources */,
+				5C85FF3327EE471E007A7907 /* RaceObject.swift in Sources */,
+				5C85FF3F27EE48CF007A7907 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +402,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +430,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
