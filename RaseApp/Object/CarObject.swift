@@ -25,7 +25,7 @@ class CarObject {
     }
     
     func size() -> CGSize {
-        return CGSize(width: 120, height: 120)
+        return CGSize(width: 100, height: 100)
     }
     
     func startPosition() {

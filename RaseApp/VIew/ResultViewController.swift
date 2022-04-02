@@ -28,7 +28,7 @@ class ResultViewController: UIViewController, UITableViewDataSource, UITableView
         
         let data = UserDefaults.standard.value([Result].self, forKey: "results")
         dataResults = data?.sorted(by: { $0.exp > $1.exp })
-        dataResults?.prefix(8)
+        dataResults?.removeSubrange(8...)
         
         //create Fon
         imagesFonView.contentMode = .scaleAspectFill
@@ -46,7 +46,7 @@ class ResultViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:ResultCell = (self.tableView?.dequeueReusableCell(withIdentifier: ResultCell.className, for: indexPath) as? ResultCell)!
+        let _:ResultCell = (self.tableView?.dequeueReusableCell(withIdentifier: ResultCell.className, for: indexPath) as? ResultCell)!
         guard let tableView = self.tableView,
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as? ResultCell else {
                 return UITableViewCell()
