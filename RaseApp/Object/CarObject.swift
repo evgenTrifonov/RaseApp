@@ -83,18 +83,26 @@ class CarObject {
         return CGFloat(Double.pi * 2 / Double(rotateBy))
     }
     
+
+    
     private func setPosition() {
         guard let view = self.view else { return }
 
         switch Manager.shared.carPosition {
-        case 0: view.center.x = 60
-        case 1: view.center.x = 200
-        case 2: view.center.x = 350
+        case 0:
+            view.center.x = 60
+        case 1:
+            view.center.x = 200
+        case 2:
+            view.center.x = 350
         default: Manager.shared.stopGame()
         }
         view.center.y = self.yPosition
 
     }
+
+    
+    
     
     
 }

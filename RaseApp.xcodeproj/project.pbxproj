@@ -84,8 +84,7 @@
 		5C85FF0127EE3717007A7907 /* RaseApp */ = {
 			isa = PBXGroup;
 			children = (
-				5C85FF0227EE3717007A7907 /* AppDelegate.swift */,
-				5C85FF0427EE3717007A7907 /* SceneDelegate.swift */,
+				5C85FF4727F86EA7007A7907 /* Application */,
 				5C85FF2827EE4537007A7907 /* Extension */,
 				5C85FF2127EE447A007A7907 /* Data */,
 				5C85FF2F27EE4658007A7907 /* Object */,
@@ -147,6 +146,15 @@
 				5C85FF3A27EE47F7007A7907 /* ResultCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5C85FF4727F86EA7007A7907 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5C85FF0227EE3717007A7907 /* AppDelegate.swift */,
+				5C85FF0427EE3717007A7907 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

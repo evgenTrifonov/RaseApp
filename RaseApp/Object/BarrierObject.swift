@@ -13,7 +13,7 @@ let elements = ["wheel", "kirp", "stone"]
 class BarrierObject: RaceObject {
     
     override func size() -> CGSize {
-        return CGSize(width: 75, height: 75)
+        return CGSize(width: 80, height: 80)
     }
     
     override func contactWithCar(){

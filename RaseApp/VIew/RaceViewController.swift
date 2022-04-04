@@ -10,7 +10,7 @@ import UIKit
 class RaceViewController: UIViewController {
     
     enum Constants {
-            static let step: CGFloat = 130
+            static let step: CGFloat = 120
         }
     
     @IBOutlet weak var carImage: UIImageView?
@@ -40,22 +40,36 @@ class RaceViewController: UIViewController {
         imagesRoadView.frame = CGRect(x: CGFloat.zero, y: CGFloat.zero, width: view.frame.width, height: view.frame.height)
         view.addSubview(imagesRoadView)
         view.sendSubviewToBack(imagesRoadView)
-                
+
         imagesRoad2View.contentMode = .scaleAspectFill
         imagesRoad2View.frame = CGRect(x: CGFloat.zero, y: CGFloat.zero - view.frame.height, width: view.frame.width, height: view.frame.height)
         view.addSubview(imagesRoad2View)
         view.sendSubviewToBack(imagesRoad2View)
-        
+
         DispatchQueue.main.async {
                 self.moveRoad()
         }
-        
+
         startGame()
+
+
     }
+    
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         navigationController?.setNavigationBarHidden(true, animated: true)   
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+       
+    }
+    
+    func viewWillApper () {
+            moveRoad()
+      
+        }
     
     
     @objc func gameStep() {
@@ -125,13 +139,7 @@ class RaceViewController: UIViewController {
             print("empty")
         }
     }
- 
-  
-    
-    func viewWillApper() {
-            moveRoad()
-           
-        }
+
 
 }
 
@@ -145,4 +153,5 @@ func moveRoad() {
         self.imagesRoad2View.frame = self.imagesRoad2View.frame.offsetBy(dx: 0.0, dy: +1 * self.imagesRoad2View.frame.size.height)
     }, completion: nil)
   }
+    
 }

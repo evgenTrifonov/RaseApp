@@ -26,9 +26,12 @@ class ResultViewController: UIViewController, UITableViewDataSource, UITableView
         tableView?.dataSource = self
         tableView?.delegate = self
         
-        let data = UserDefaults.standard.value([Result].self, forKey: "results")
-        dataResults = data?.sorted(by: { $0.exp > $1.exp })
-        dataResults?.removeSubrange(8...)
+        let data = UserDefaults.standard.value([Result].self, forKey: "results") ?? []
+        dataResults = Array(data
+                            .sorted(by: { $0.exp > $1.exp })
+                            .prefix(8))
+    
+        
         
         //create Fon
         imagesFonView.contentMode = .scaleAspectFill
