@@ -58,19 +58,20 @@ class RaceViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        navigationController?.setNavigationBarHidden(true, animated: true)   
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
     }
+
+    func viewWillApper () {
+            moveRoad()
+        }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-       
+       // setCarImage()
+
     }
-    
-    func viewWillApper () {
-            moveRoad()
-      
-        }
-    
+  
     
     @objc func gameStep() {
         Manager.shared.result += 1
@@ -112,7 +113,8 @@ class RaceViewController: UIViewController {
     }
     
     private func setCarImage(num: Int) {
-        carImage?.image = UIImage(named: CarColor(rawValue: num)?.image ?? CarColor.red.image) //SettingManager.shared.carImageName
+        carImage?.image = UIImage(named: CarColor(rawValue: num)?.image ?? CarColor.red.image)
+        //SettingManager.shared.carImage
     }
     
     //MARK: - private func
