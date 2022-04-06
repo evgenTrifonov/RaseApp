@@ -68,7 +68,7 @@ class RaceViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-       // setCarImage()
+        setCarImage(num: 1)
 
     }
   
