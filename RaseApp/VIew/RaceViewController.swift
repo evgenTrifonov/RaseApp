@@ -9,6 +9,8 @@ import UIKit
 
 class RaceViewController: UIViewController {
     
+    
+    
     enum Constants {
             static let step: CGFloat = 120
         }
@@ -51,7 +53,7 @@ class RaceViewController: UIViewController {
         }
 
         startGame()
-        //setPosition()
+        setPosition()
 
     }
     
@@ -68,7 +70,8 @@ class RaceViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        setCarImage(num: 1)
+//        setCarImage(num: 1)
+//        setPosition()
 
     }
   
@@ -157,4 +160,15 @@ func moveRoad() {
     }, completion: nil)
   }
     
+     func setPosition() {
+         self.displayView!.addSubview(carImage!)
+
+        NSLayoutConstraint.activate([
+            carImage!.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            carImage!.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            carImage!.widthAnchor.constraint(equalToConstant: view.bounds.maxX / 3),
+            carImage!.heightAnchor.constraint(equalToConstant: 150)
+            ])
+
+    }
 }
