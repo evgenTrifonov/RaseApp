@@ -12,6 +12,7 @@ class CarObject {
     
     var view: UIImageView?
     var displayView: UIView?
+    var carImage: UIImageView?
     
     var rotate: Double = 0
     
@@ -85,24 +86,34 @@ class CarObject {
     
 
     
-    private func setPosition() {
-        guard let view = self.view else { return }
+//    private func setPosition() {
+//        guard let view = self.view else { return }
+//
+//        switch Manager.shared.carPosition {
+//        case 0:
+//            view.center.x = 60
+//        case 1:
+//            view.center.x = 200
+//        case 2:
+//            view.center.x = 350
+//        default: Manager.shared.stopGame()
+//        }
+//        view.center.y = self.yPosition
+//
+//    }
 
-        switch Manager.shared.carPosition {
-        case 0:
-            view.center.x = 60
-        case 1:
-            view.center.x = 200
-        case 2:
-            view.center.x = 350
-        default: Manager.shared.stopGame()
-        }
-        view.center.y = self.yPosition
+    private func setPosition() {
+        displayView.addSubviewsForAutoLayout([carImage])
+
+        NSLayoutConstraint.activate([
+            carImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            carImage.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, contains: -0),
+            carImage.widthAnchor.constraint(equalTo: view.bounds.maxX / 3),
+            carImage.heightAnchor.constraint(equalTo: 150)
+            ])
 
     }
-
-    
-    
+       
     
     
 }

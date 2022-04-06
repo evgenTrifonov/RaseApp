@@ -51,7 +51,7 @@ class RaceViewController: UIViewController {
         }
 
         startGame()
-
+        //setPosition()
 
     }
     
@@ -142,6 +142,7 @@ class RaceViewController: UIViewController {
         }
     }
 
+   
 
 }
 
