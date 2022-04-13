@@ -19,28 +19,13 @@ class RaceObject: UIImageView {
     
     var view: UIImageView?
     let stepCount: Int = 10
-    let objectSize: Int = 100
+    let objectSize: Int = 80
     
     var type: RaceObjectType = .barear
     
     func getImage(position: Int) -> UIImage {
         preconditionFailure("This method must be overridden")
     }
-    
-    var raceMap:[[CGPoint]] = [
-        [ // 1 begin
-            CGPoint(x: 60,  y: -11),
-            CGPoint(x: 200, y: -11),
-            CGPoint(x: 350, y: -11)
-        ],
-        [ // 6 out line
-            CGPoint(x: 60,  y: 760),
-            CGPoint(x: 200, y: 760),
-            CGPoint(x: 350, y: 760)
-        ],
-    ]
-    
-    
     
     func size() -> CGSize {
         return CGSize(width: 100, height: 100)
@@ -69,8 +54,8 @@ class RaceObject: UIImageView {
             
             let intY = Int(self.point.y)
             let intX = Int(self.point.x)
-            let minFrame = self.raceMap[0][intX]
-            let maxFrame = self.raceMap[1][intX]
+            let minFrame = self.calculatePosition(for: intX, isStart: true)
+            let maxFrame = self.calculatePosition(for: intX, isStart: false)
 
             let x: Int = Int(minFrame.x)
             let y: Int = Int(minFrame.y) + Int(maxFrame.y - minFrame.y) / self.stepCount * intY
@@ -95,7 +80,7 @@ class RaceObject: UIImageView {
         
         let imageView = UIImageView()
         imageView.image =  getImage(position: cell)
-        imageView.center = raceMap[0][cell]
+        imageView.center = calculatePosition(for: cell, isStart: true)
         
         
         self.view = imageView
@@ -106,6 +91,19 @@ class RaceObject: UIImageView {
         self.move()
     }
     
+    
+    func calculatePosition(for side: Int, isStart: Bool) -> CGPoint {
+        guard let view = Manager.shared.displayView else { return CGPoint(x: 60, y: -11) }
+        let yPosition = isStart ? -20 : view.frame.height + 20
+        switch side {
+        case 0:
+            return CGPoint(x: 60, y: yPosition)
+        case 1:
+            return CGPoint(x: view.center.x, y: yPosition)
+        default:
+            return CGPoint(x: view.frame.width - 60, y: yPosition)
+        }
+    }
     
     func move() {
         self.point.y += 1

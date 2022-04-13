@@ -70,8 +70,7 @@ class RaceViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        setCarImage(num: 1)
-//        setPosition()
+        car?.startPosition()
 
     }
   
@@ -171,4 +170,6 @@ func moveRoad() {
             ])
 
     }
+    
+    
 }

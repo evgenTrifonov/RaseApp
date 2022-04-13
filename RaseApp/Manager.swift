@@ -21,11 +21,10 @@ class Manager {
     
     var timer: Timer?
 
-    
     var displayView: UIView?
     
     let speedStep = 0.1
-    let speedStart = 0.7
+    let speedStart = 0.5
     
     func stopGame() {
         timer?.invalidate()

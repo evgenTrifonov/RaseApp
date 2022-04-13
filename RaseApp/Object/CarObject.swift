@@ -16,7 +16,7 @@ class CarObject {
     
     var rotate: Double = 0
     
-    let rotateRad: Double = 30
+    let rotateRad: Double = 40
     var yPosition: CGFloat = 650
   
     
@@ -46,15 +46,15 @@ class CarObject {
     
     private func carMove() {
         guard let view = self.view else { return }
-        
+
         UIView.animate(withDuration: 0.2) {
             self.setPosition()
-            
+
             let rotateBy = (self.rotate < 0) ? self.rotateRad: -self.rotateRad
             self.rotate = 0
             view.transform = view.transform.rotated(by: self.getRadius(rotateBy: rotateBy))
             view.frame.size = self.size()
-            
+
         }
     }
     
@@ -74,7 +74,7 @@ class CarObject {
     
     private func animate(rotateBy: Double) {
         guard let view  = self.view else { return }
-        UIView.animate(withDuration: 0.1, delay: 0, options: [.curveLinear], animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveLinear], animations: {
             view.transform = view.transform.rotated(by: self.getRadius(rotateBy: rotateBy))
         }) { (_) in
             self.carMove()
@@ -87,20 +87,21 @@ class CarObject {
     }
     
 
-    
     private func setPosition() {
-        guard let view = self.view else { return }
+            guard let view = self.view,
+                let superview = displayView else { return }
 
-        switch Manager.shared.carPosition {
-        case 0:
-            view.center.x = 60
-        case 1:
-            view.center.x = 200
-        case 2:
-            view.center.x = 350
-        default: Manager.shared.stopGame()
+            let offset: CGFloat = 10
+            switch Manager.shared.carPosition {
+            case 0:
+                view.center.x = size().width / 2 + offset
+            case 1:
+                view.center.x = superview.frame.midX
+            case 2:
+                view.center.x = superview.frame.maxX - size().width / 2 - offset
+            default: Manager.shared.stopGame()
+            }
+            view.center.y = self.yPosition
         }
-        view.center.y = self.yPosition
-    }
-
+    
 }

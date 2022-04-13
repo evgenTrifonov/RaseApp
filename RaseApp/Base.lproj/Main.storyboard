@@ -94,7 +94,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epX-A1-MpL">
-                                <rect key="frame" x="155" y="572" width="104" height="30"/>
+                                <rect key="frame" x="90" y="572" width="234" height="30"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Играть заново">
                                     <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,6 +108,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tqo-hA-K1G" firstAttribute="leading" secondItem="bGC-39-sn3" secondAttribute="leadingMargin" id="D9t-es-68N"/>
+                            <constraint firstItem="1Sb-AC-XVM" firstAttribute="trailing" secondItem="epX-A1-MpL" secondAttribute="trailing" constant="90" id="Id4-e9-Whd"/>
                             <constraint firstItem="lbz-3o-02t" firstAttribute="top" secondItem="1Sb-AC-XVM" secondAttribute="top" constant="20" id="Jwe-Oc-Adk"/>
                             <constraint firstItem="tqo-hA-K1G" firstAttribute="centerX" secondItem="epX-A1-MpL" secondAttribute="centerX" id="Ks3-ak-Sdp"/>
                             <constraint firstItem="tqo-hA-K1G" firstAttribute="centerX" secondItem="lbz-3o-02t" secondAttribute="centerX" id="L1a-Go-oD8"/>
@@ -117,6 +118,8 @@
                             <constraint firstItem="1Sb-AC-XVM" firstAttribute="trailing" secondItem="tqo-hA-K1G" secondAttribute="trailing" constant="20" id="bF2-eh-Bzk"/>
                             <constraint firstItem="1Sb-AC-XVM" firstAttribute="trailing" secondItem="lbz-3o-02t" secondAttribute="trailing" constant="20" id="eKV-0f-3F4"/>
                             <constraint firstItem="epX-A1-MpL" firstAttribute="top" secondItem="tqo-hA-K1G" secondAttribute="bottom" constant="20" id="fbQ-hE-ulo"/>
+                            <constraint firstItem="epX-A1-MpL" firstAttribute="top" secondItem="tqo-hA-K1G" secondAttribute="bottom" constant="20" id="jyr-tm-5ZX"/>
+                            <constraint firstItem="epX-A1-MpL" firstAttribute="leading" secondItem="1Sb-AC-XVM" secondAttribute="leading" constant="90" id="xQA-FS-1vI"/>
                         </constraints>
                     </view>
                     <connections>
