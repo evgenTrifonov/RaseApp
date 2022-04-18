@@ -47,7 +47,7 @@ class CarObject {
     private func carMove() {
         guard let view = self.view else { return }
 
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.3) {
             self.setPosition()
 
             let rotateBy = (self.rotate < 0) ? self.rotateRad: -self.rotateRad
@@ -59,22 +59,22 @@ class CarObject {
     }
     
     func moveLeft() {
-        if rotate != 0 {return}
         Manager.shared.carPosition -= 1
         rotate -= rotateRad
         animate(rotateBy: rotate)
+        if rotate != 0 {return}
     }
     
     func moveRight() {
-        if rotate != 0 {return}
         Manager.shared.carPosition += 1
         rotate += rotateRad
         animate(rotateBy: rotate)
+        if rotate != 0 {return}
     }
     
     private func animate(rotateBy: Double) {
         guard let view  = self.view else { return }
-        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveLinear], animations: {
+        UIView.animate(withDuration: 0.1, delay: 0, options: [.curveLinear], animations: {
             view.transform = view.transform.rotated(by: self.getRadius(rotateBy: rotateBy))
         }) { (_) in
             self.carMove()
