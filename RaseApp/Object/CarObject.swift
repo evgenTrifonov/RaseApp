@@ -16,7 +16,7 @@ class CarObject {
     
     var rotate: Double = 0
     
-    let rotateRad: Double = 40
+    let rotateRad: Double = 1
     var yPosition: CGFloat = 650
   
     
