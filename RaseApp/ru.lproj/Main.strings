@@ -1,0 +1,51 @@
+
+/* Class = "UIBarButtonItem"; title = "Главная"; ObjectID = "1FX-ry-kMq"; */
+"1FX-ry-kMq.title" = "Главная";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2oC-vT-9E2"; */
+"2oC-vT-9E2.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Настройки"; ObjectID = "4ub-KY-ptL"; */
+"4ub-KY-ptL.configuration.title" = "Настройки";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4ub-KY-ptL"; */
+"4ub-KY-ptL.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "5Yt-s1-fcP"; */
+"5Yt-s1-fcP.text" = "0";
+
+/* Class = "UIButton"; configuration.title = "Играть"; ObjectID = "7Rn-Qd-jjK"; */
+"7Rn-Qd-jjK.configuration.title" = "Играть";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7Rn-Qd-jjK"; */
+"7Rn-Qd-jjK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Текущий результат"; ObjectID = "8FT-OY-Wme"; */
+"8FT-OY-Wme.text" = "Текущий результат";
+
+/* Class = "UIButton"; normalTitle = "Сохранить"; ObjectID = "8Xk-Vp-GMv"; */
+"8Xk-Vp-GMv.normalTitle" = "Сохранить";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BTI-FT-bdJ"; */
+"BTI-FT-bdJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Лучший результат"; ObjectID = "Hc0-uD-lDJ"; */
+"Hc0-uD-lDJ.text" = "Лучший результат";
+
+/* Class = "UINavigationItem"; title = "Настройки"; ObjectID = "Mhk-e1-qcV"; */
+"Mhk-e1-qcV.title" = "Настройки";
+
+/* Class = "UILabel"; text = "Имя"; ObjectID = "QbS-g6-3Mm"; */
+"QbS-g6-3Mm.text" = "Имя";
+
+/* Class = "UILabel"; text = "Result"; ObjectID = "TYG-aO-Ias"; */
+"TYG-aO-Ias.text" = "Result";
+
+/* Class = "UIButton"; normalTitle = "Играть заново"; ObjectID = "epX-A1-MpL"; */
+"epX-A1-MpL.normalTitle" = "Играть заново";
+
+/* Class = "UIButton"; normalTitle = "Следующая"; ObjectID = "rDa-Sj-xGi"; */
+"rDa-Sj-xGi.normalTitle" = "Следующая";
+
+/* Class = "UIButton"; normalTitle = "Предыдущая"; ObjectID = "sR2-T3-2Tf"; */
+"sR2-T3-2Tf.normalTitle" = "Предыдущая";
